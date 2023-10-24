@@ -12,6 +12,9 @@ sky_surface = pygame.image.load('C:/Users\kalco\Coding Projects\Python\Pygame-Te
 ground_surface = pygame.image.load('C:/Users\kalco\Coding Projects\Python\Pygame-Test\graphics\ground.png')
 text_surface = test_font.render('My Game', False, 'Black') # (text, Anti-Aliasing, color)
 
+snail_surface = pygame.image.load('C:/Users\kalco\Coding Projects\Python\Pygame-Test\graphics\snail\snail1.png')
+snail_x_pos = 600
+
 running = True
 while running:
     # poll for events
@@ -23,7 +26,8 @@ while running:
             
     screen.blit(sky_surface, (0,0))
     screen.blit(ground_surface, (0,300))  
-    screen.blit(text_surface, (300, 50))   
+    screen.blit(text_surface, (300, 50))  
+    screen.blit(snail_surface, (snail_x_pos, 250)) 
             
     # update everything
     pygame.display.update()
