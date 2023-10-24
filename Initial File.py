@@ -6,11 +6,13 @@ pygame.init()
 screen = pygame.display.set_mode((800,400)) # (width, height)
 pygame.display.set_caption('First Game')
 clock = pygame.time.Clock()
-running = True
+test_font = pygame.font.Font('C:/Users\kalco\Coding Projects\Python\Pygame-Test\\font\Pixeltype.ttf', 50) # (font type, font size)
 
 sky_surface = pygame.image.load('C:/Users\kalco\Coding Projects\Python\Pygame-Test\graphics\Sky.png')
 ground_surface = pygame.image.load('C:/Users\kalco\Coding Projects\Python\Pygame-Test\graphics\ground.png')
+text_surface = test_font.render('My Game', False, 'Black') # (text, Anti-Aliasing, color)
 
+running = True
 while running:
     # poll for events
     # pygame.QUIT event means the user clicked the x to close the window
@@ -20,14 +22,13 @@ while running:
             running = False
             
     screen.blit(sky_surface, (0,0))
-    screen.blit(ground_surface, (0,300))     
+    screen.blit(ground_surface, (0,300))  
+    screen.blit(text_surface, (300, 50))   
             
     # update everything
     pygame.display.update()
     clock.tick(60)
     
-
-
 
 
 # This closes the game window once the while-loop above ends when the x button is pressed
