@@ -8,11 +8,11 @@ pygame.display.set_caption('First Game')
 clock = pygame.time.Clock()
 test_font = pygame.font.Font('C:/Users\kalco\Coding Projects\Python\Pygame-Test\\font\Pixeltype.ttf', 50) # (font type, font size)
 
-sky_surface = pygame.image.load('C:/Users\kalco\Coding Projects\Python\Pygame-Test\graphics\Sky.png')
-ground_surface = pygame.image.load('C:/Users\kalco\Coding Projects\Python\Pygame-Test\graphics\ground.png')
+sky_surface = pygame.image.load('C:/Users\kalco\Coding Projects\Python\Pygame-Test\graphics\Sky.png').convert()
+ground_surface = pygame.image.load('C:/Users\kalco\Coding Projects\Python\Pygame-Test\graphics\ground.png').convert()
 text_surface = test_font.render('My Game', False, 'Black') # (text, Anti-Aliasing, color)
 
-snail_surface = pygame.image.load('C:/Users\kalco\Coding Projects\Python\Pygame-Test\graphics\snail\snail1.png')
+snail_surface = pygame.image.load('C:/Users\kalco\Coding Projects\Python\Pygame-Test\graphics\snail\snail1.png').convert_alpha()
 snail_x_pos = 600
 
 running = True
