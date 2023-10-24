@@ -8,7 +8,8 @@ pygame.display.set_caption('First Game')
 clock = pygame.time.Clock()
 running = True
 
-test_surface = pygame.image.load('C:/Users\kalco\Coding Projects\Python\Pygame-Test\graphics\Sky.png')
+sky_surface = pygame.image.load('C:/Users\kalco\Coding Projects\Python\Pygame-Test\graphics\Sky.png')
+ground_surface = pygame.image.load('C:/Users\kalco\Coding Projects\Python\Pygame-Test\graphics\ground.png')
 
 while running:
     # poll for events
@@ -18,7 +19,8 @@ while running:
         if event.type == pygame.QUIT:
             running = False
             
-    screen.blit(test_surface, (0,0))     
+    screen.blit(sky_surface, (0,0))
+    screen.blit(ground_surface, (0,300))     
             
     # update everything
     pygame.display.update()
