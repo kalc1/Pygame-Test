@@ -26,6 +26,9 @@ while running:
     for event in pygame.event.get():
         if event.type == pygame.QUIT:
             running = False
+        # if event.type == pygame.MOUSEMOTION:
+        #     if player_rect.collidepoint(event.pos):
+        #         print('collision')
             
     screen.blit(sky_surface, (0,0))
     screen.blit(ground_surface, (0,300))  
@@ -36,6 +39,13 @@ while running:
         snail_rect.left = 800 # this is the size of the screen
     screen.blit(snail_surface, snail_rect) 
     screen.blit(player_surface, player_rect)
+
+    # if player_rect.colliderect(snail_rect):
+    #     print('collision')
+    
+    # mouse_pos = pygame.mouse.get_pos()
+    # if player_rect.collidepoint((mouse_pos)): # (x,y) mouse coordinate is determined by mouse.get_pos()
+    #     print(pygame.mouse.get_pressed())
             
     # update everything
     pygame.display.update()
