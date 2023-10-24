@@ -11,7 +11,7 @@ test_font = pygame.font.Font('C:/Users\kalco\Coding Projects\Python\Pygame-Test\
 sky_surface = pygame.image.load('C:/Users\kalco\Coding Projects\Python\Pygame-Test\graphics\Sky.png').convert()
 ground_surface = pygame.image.load('C:/Users\kalco\Coding Projects\Python\Pygame-Test\graphics\ground.png').convert()
 
-score_surface = test_font.render('My Game', False, 'Black') # (text, Anti-Aliasing, color)
+score_surface = test_font.render('My Game', False, (64, 64, 64)) # (text, Anti-Aliasing, color)
 score_rect = score_surface.get_rect(center = (400, 50))
 
 snail_surface = pygame.image.load('C:/Users\kalco\Coding Projects\Python\Pygame-Test\graphics\snail\snail1.png').convert_alpha()
@@ -34,8 +34,8 @@ while running:
             
     screen.blit(sky_surface, (0,0))
     screen.blit(ground_surface, (0,300))  
-    pygame.draw.rect(screen, 'Yellow', score_rect)
-    pygame.draw.rect(screen, 'Yellow', score_rect, 20)
+    pygame.draw.rect(screen, '#c0e8ec', score_rect)
+    pygame.draw.rect(screen, '#c0e8ec', score_rect, 20)
     screen.blit(score_surface, score_rect)  
 
     snail_rect.x -= 1
