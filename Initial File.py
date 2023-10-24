@@ -14,7 +14,7 @@ text_surface = test_font.render('My Game', False, 'Black') # (text, Anti-Aliasin
 
 snail_surface = pygame.image.load('C:/Users\kalco\Coding Projects\Python\Pygame-Test\graphics\snail\snail1.png').convert_alpha()
 snail_rect = snail_surface.get_rect(bottomright = (600, 300))
-
+# The 300 integer comes from the placement of the ground surface
 player_surface = pygame.image.load('C:/Users\kalco\Coding Projects\Python\Pygame-Test\graphics\player\player_walk_1.png').convert_alpha()
 player_rect = player_surface.get_rect(midbottom = (80,300))
  
@@ -33,7 +33,7 @@ while running:
 
     snail_rect.x -= 1
     if snail_rect.right <= 0:
-        snail_rect.left = 800
+        snail_rect.left = 800 # this is the size of the screen
     screen.blit(snail_surface, snail_rect) 
     screen.blit(player_surface, player_rect)
             
